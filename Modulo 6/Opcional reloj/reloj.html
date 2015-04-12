@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Reloj</title>
+	  <meta charset="UTF-8">
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Lobster|Pacifico|Dancing+Script' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body {
+  background-image: url(reloj.jpg); 
+  background-size: 1400px;  
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Dancing Script;
+  padding: 60px;
+  text-align: center;
+}
+
+h2 {
+  color: #A68656;
+  font-family: Dancing Script;
+  font-size: 70px;
+
+}
+
+div {
+  border: 2px dotted #A68656;
+  display: inline-block;
+  height: 30px;
+  width: 180px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function mostrar_reloj() {
+  var fechaHora = new Date();
+  var horas = fechaHora.getHours();
+  var minutos = fechaHora.getMinutes();
+  var segundos = fechaHora.getSeconds();
+  var milisegundos = fechaHora.getMilliseconds();
+
+  if(horas < 10) { horas = '0' + horas; }
+  if(minutos < 10) { minutos = '0' + minutos; }
+  if(segundos < 10) { segundos = '0' + segundos; }
+  if(milisegundos < 10) { milisegundos = '0' + milisegundos; }
+
+  document.getElementById("reloj").innerHTML = horas + ' : '+ minutos + ' : ' + segundos + ' : ' + milisegundos;
+}
+
+var estaCorriendo= false;
+
+function pauseAndPlay (){
+  if (!estaCorriendo) {
+    tiempo = setInterval(function() { mostrar_reloj() }, 1);
+    estaCorriendo = true;
+    return true;
+  }
+  else {
+      estaCorriendo = false;
+      clearInterval(tiempo);
+      return true;
+      
+  }
+}
+
+pauseAndPlay();
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Reloj</h2>
+
+<div id="reloj" onclick= "pauseAndPlay()">reloj</div>
+
+</body>
+</html>

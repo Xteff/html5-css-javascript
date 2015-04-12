@@ -1,0 +1,23 @@
+@charset "utf-8";
+body { 
+  background: #FFF;
+  Color: #000;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-variant: Times New Roman, courier;
+}
+
+#fecha { strong;
+  color: #E30408;
+  font-size: 10px;
+}
+
+	
+h1,h3,h5 {strong;}
+
+div {background: #E7E5E5;}
+
+p {line-height: 20px;}
+
+a:hover {Color: #8E8B8B;}
+a:visited {color: #FB080C;}

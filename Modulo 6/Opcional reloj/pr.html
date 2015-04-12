@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Reloj</title>
+      <meta charset="UTF-8">
+
+<body>
+
+<p id="demo" onclick="pauseAndPlay()"></p>
+
+<div id="pause" onclick="pauseAndPlay()">Pause / Play</div>
+<script>
+
+var isPaused = null;
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = t;
+}
+
+function pauseAndPlay(e) {
+    if(isPaused !== true){
+     isPaused = true;
+     myVar = setInterval(function(){ myTimer() }, 1);
+     e.preventDefault();
+    } else {
+     isPaused = false;
+     clearInterval(myVar);
+     e.preventDefault(); 
+    }   
+}
+</script>
+
+</body>
+</html>

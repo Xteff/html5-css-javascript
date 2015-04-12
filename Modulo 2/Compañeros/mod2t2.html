@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Herencia</title>
+        <style type="text/css">
+			h1 { color: pink; } /*Puntuación 0,0,0,1*/
+			h1 { color: brown; } /*Puntuación 0,0,0,1*/
+			#caja .cabecera h1 {color:#F30;} /*Puntuación 0,1,1,1*/
+			#caja header h1 {color: black;} /*Puntuación 0,1,0,2*/
+			header  h1 {color: lime;} /*Puntuación 0,0,0,2*/
+			.cabecera h1{color:#F3F;} /*Puntuación 0,0,1,1*/
+		</style>
+	</head>
+
+	<body>
+    	<div id="caja">
+        <header class="cabecera">
+        	<h1>Cabecera:header</h1>
+        </header>
+        </div>
+	</body>
+</html>

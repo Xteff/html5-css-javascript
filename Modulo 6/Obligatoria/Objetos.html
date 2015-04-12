@@ -1,0 +1,87 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Script</title>
+
+<style type="text/css">
+body {
+	background-image: url(code.jpg);
+	text-align: left;
+	color: #000;
+}
+
+table {
+	padding: 0px;
+	margin: 0px;
+	border-spacing: 0px;
+	font-family: sans-serif, Arial;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 150%;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #FFF;	
+	text-align: left;
+}
+
+th, td {
+	padding: 0,7em;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #FFF;
+}
+
+h1 {
+	display: block;
+	color: #FFF;
+	text-align: center;
+}
+
+</style>
+
+<h1> Propiedades</h1>
+
+</head>
+
+<body>
+
+<table id="tabla">
+ <tr><th> Propiedad </th><th> Valor </th></tr>
+</table> 
+
+<script>
+
+var x = prompt ("Introduce una Propiedad: ");
+
+// Son los tipos de objeto window
+var objetosWindow = ["window", "screen", "this.location", "document"];
+
+// Esta funcion solo sirve para cerciorarse si es de tipo objeto o no.
+function tipoObjeto(objeto) {
+	if(typeof objeto === 'object') {
+		return objeto;
+	}
+}
+
+// indexOf sirve para saber si la palabra que buscas esta incluida en una lista si el resultado es mayor o igual a 0 significa que si esta dentro de la lista
+if(objetosWindow.indexOf(x) >= 0){
+	var i, tabla = document.getElementById("tabla");
+	// Con esta siguiente variable conviertes a objeto tu string.
+	var hacerObjeto = eval('{'+ x +'}');
+	
+	for (i in tipoObjeto(hacerObjeto)){   	
+			tabla.innerHTML+="<tr><td>"+i+"</td><td> = "+tipoObjeto(hacerObjeto)[i]+"</td></tr>";
+	}
+} else {
+ 	document.write("No es imprimible");
+}
+
+
+
+</script>
+
+</body>
+</html>

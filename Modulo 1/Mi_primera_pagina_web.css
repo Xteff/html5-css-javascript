@@ -1,0 +1,10 @@
+body {
+  background: #FFF;
+  Color: #000;
+  font-family: Times New Roman;
+  font-size: 14px;
+}
+
+ h1,h2,h3 {color: #007D1C;}
+ h1 {text-align: center;}
+ li {margin-bottom: 10px;}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tabla</title>
+
+<style type="text/css">
+
+#table {
+
+	border: 2px solid #000;
+	height: 300px;
+	width: 300px; 
+}
+
+#encabezado{
+	border-bottom: 1px solid #000;
+	height: 50px;
+	text-align: center;
+	width: 300px;
+}
+
+#encabezado h1 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+#fila1, #fila2 {
+	border-bottom: 1px solid #000;
+	height: 30px;
+	width: 300px;
+}
+
+#celda1,#celda2,#celda3, #celda4, #celda5, #celda6 {
+
+	border-bottom: 1px solid #000;
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	width: 98px;
+}
+
+#celda1, #celda2, #celda4, #celda5 {
+	border-right: 1px solid #000;
+}
+
+#celda1, #celda4 {
+	float: left;
+}
+
+#celda2, #celda5{
+	float: center;
+}
+#celda3, #celda6 {
+	float: right;
+
+}
+
+#celda1 p,#celda2 p,#celda3 p, #celda4 p, #celda5 p, #celda6 p {
+	margin-top: 4px;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="table">
+
+		<div id="encabezado"><h1>Titulo</h1></div>
+		<div id="fila1">
+			<div id="celda1"><p>1</p></div>
+			<div id="celda2"><p>2</p></div>
+			<div id="celda3"><p>3</p></div>
+		</div>
+		<div id="fila2">
+			<div id="celda4"><p>4</p></div>
+			<div id="celda5"><p>5</p></div>
+			<div id="celda6"><p>6</p></div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
